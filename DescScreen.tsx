@@ -39,7 +39,7 @@ const DescScreen: React.FC<any> = memo(
           <View style={styles.item}>
             <Text>test-5</Text>
           </View>
-          <View style={styles.item}>
+          <View style={[styles.item, styles.item2] }>
             <Text>test-6</Text>
             <Text>{count}</Text>
             <Text onPress={handleAdd}> add + 1</Text>
@@ -75,6 +75,10 @@ const styles = StyleSheet.create({
     height: 100,
     borderBottomWidth: 1,
     borderBottomColor: '#333333'
+  },
+  item2: {
+    height: 150,
+    backgroundColor: 'red'
   },
   footer: {
     height: 60,
